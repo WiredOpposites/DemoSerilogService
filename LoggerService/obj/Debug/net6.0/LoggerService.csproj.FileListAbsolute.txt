@@ -1,0 +1,12 @@
+D:\dev\LoggingService\LoggingService\LoggerService\bin\Debug\net6.0\LoggerService.deps.json
+D:\dev\LoggingService\LoggingService\LoggerService\bin\Debug\net6.0\LoggerService.dll
+D:\dev\LoggingService\LoggingService\LoggerService\bin\Debug\net6.0\LoggerService.pdb
+D:\dev\LoggingService\LoggingService\LoggerService\obj\Debug\net6.0\LoggerService.csproj.AssemblyReference.cache
+D:\dev\LoggingService\LoggingService\LoggerService\obj\Debug\net6.0\LoggerService.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\LoggingService\LoggingService\LoggerService\obj\Debug\net6.0\LoggerService.AssemblyInfoInputs.cache
+D:\dev\LoggingService\LoggingService\LoggerService\obj\Debug\net6.0\LoggerService.AssemblyInfo.cs
+D:\dev\LoggingService\LoggingService\LoggerService\obj\Debug\net6.0\LoggerService.csproj.CoreCompileInputs.cache
+D:\dev\LoggingService\LoggingService\LoggerService\obj\Debug\net6.0\LoggerService.dll
+D:\dev\LoggingService\LoggingService\LoggerService\obj\Debug\net6.0\refint\LoggerService.dll
+D:\dev\LoggingService\LoggingService\LoggerService\obj\Debug\net6.0\LoggerService.pdb
+D:\dev\LoggingService\LoggingService\LoggerService\obj\Debug\net6.0\ref\LoggerService.dll

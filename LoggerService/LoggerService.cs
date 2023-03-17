@@ -1,7 +1,10 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.ApplicationInsights.Extensibility;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Serilog;
 using Serilog.Core;
+using Serilog.Events;
+using Serilog.Exceptions;
 
 namespace LoggerService
 {
@@ -11,6 +14,26 @@ namespace LoggerService
         private const string InnerExceptionName = "Inner Exception";
         private const string ExceptionMessageWithoutInnerException = "{0}{1}: {2}Message: {3}{4}StackTrace: {5}.";
         private const string ExceptionMessageWithInnerException = "{0}{1}{2}";
+
+        public LoggerService()
+        {
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Information()
+                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+                .MinimumLevel.Override("System", LogEventLevel.Warning)
+                .MinimumLevel.Override("Worker", LogEventLevel.Warning)
+                .MinimumLevel.Override("Host", LogEventLevel.Warning)
+                .MinimumLevel.Override("Function", LogEventLevel.Warning)
+                .MinimumLevel.Override("Azure", LogEventLevel.Warning)
+                .MinimumLevel.Override("DurableTask", LogEventLevel.Warning)
+                .Enrich.FromLogContext()
+                .Enrich.WithExceptionDetails()
+                .WriteTo.ApplicationInsights(
+                TelemetryConfiguration.CreateDefault(),
+                TelemetryConverter.Traces
+                )
+                .CreateLogger();
+        }
 
         public IServiceCollection UseLoggerService(IServiceCollection services)
         {
